@@ -105,6 +105,37 @@ if (idade >= 18) {
     println("Você é menor de idade")
 }
 ```
+## ✅ If/Else Composto (`else if`)
+
+Use quando você precisa **avaliar várias condições diferentes**, e não apenas duas opções.
+
+### Exemplo em Kotlin:
+```kotlin
+val nota = 75
+
+if (nota >= 90) {
+    println("Excelente!")
+} else if (nota >= 70) {
+    println("Bom desempenho")
+} else if (nota >= 50) {
+    println("Precisa melhorar")
+} else {
+    println("Reprovado")
+}
+```
+---
+# Operadores de Comparação em Kotlin
+
+| Operador | Significado             | Exemplo em Kotlin   | Resultado |
+|----------|-------------------------|---------------------|-----------|
+| >        | Maior que               | `5 > 3`             | `true`    |
+| <        | Menor que               | `2 < 7`             | `true`    |
+| >=       | Maior ou igual          | `5 >= 5`            | `true`    |
+| <=       | Menor ou igual          | `4 <= 6`            | `true`    |
+| ==       | Igualdade entre valores | `10 == 10`          | `true`    |
+| !=       | Diferente de            | `8 != 3`            | `true`    |
+
+
 ---
 
 ## 📂 Lista de Atividades
