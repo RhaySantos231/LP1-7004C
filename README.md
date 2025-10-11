@@ -185,7 +185,63 @@ when (expressao) {
 | !=       | Diferente de            | `8 != 3`            | `true`    |
 
 ---
+# 📘 Introdução — Arrays e Listas em Kotlin
 
+## 🔹 O que é um Array?
+
+Um **Array** é uma estrutura que armazena **vários valores do mesmo tipo** em uma única variável.  
+Cada elemento possui um **índice**, começando em **0**.
+
+### Exemplo:
+```kotlin
+val numeros = arrayOf(10, 20, 30, 40)
+println(numeros[0]) // Exibe 10
+```
+> ⚠️ **Importante:** O tamanho de um `array` é **fixo** — depois de criado, **não pode ser alterado**.
+
+---
+
+## 🔹 O que é uma List?
+
+Uma **List** é parecida com um `Array`, mas **mais flexível**.  
+Existem dois tipos principais:
+
+- `listOf()` → **imutável** (não pode adicionar ou remover itens)  
+- `mutableListOf()` → **mutável** (permite adicionar, remover, modificar)
+
+---
+
+### Exemplo:
+
+```kotlin
+val frutas = mutableListOf("Maçã", "Banana", "Laranja")
+frutas.add("Melancia")       // Adiciona
+frutas.remove("Banana")      // Remove
+println(frutas[0])           // Exibe "Maçã"
+```
+# 🧩 Comandos de Manipulação de List em Kotlin
+
+| 💻 Comando / Método | 📝 Descrição | 🧠 Exemplo em Kotlin |
+|----------------------|--------------|-----------------------|
+| `listOf()` | Cria uma **lista imutável** (não pode ser modificada) | `val frutas = listOf("Maçã", "Banana")` |
+| `mutableListOf()` | Cria uma **lista mutável** (permite alterações) | `val frutas = mutableListOf("Maçã", "Banana")` |
+| `add(item)` | Adiciona um novo item à lista | `frutas.add("Laranja")` |
+| `add(index, item)` | Adiciona um item em uma posição específica | `frutas.add(1, "Uva")` |
+| `remove(item)` | Remove o item especificado | `frutas.remove("Banana")` |
+| `removeAt(index)` | Remove o item na posição informada | `frutas.removeAt(0)` |
+| `clear()` | Remove **todos** os itens da lista | `frutas.clear()` |
+| `size` | Retorna o **tamanho da lista** | `println(frutas.size)` |
+| `isEmpty()` | Verifica se a lista está vazia (retorna `true` ou `false`) | `frutas.isEmpty()` |
+| `contains(item)` | Verifica se um item está presente na lista | `frutas.contains("Maçã")` |
+| `get(index)` | Retorna o item de um índice específico | `println(frutas.get(0))` |
+| `[index]` | Acessa o item diretamente pelo índice | `println(frutas[1])` |
+| `indexOf(item)` | Retorna o índice da primeira ocorrência do item | `println(frutas.indexOf("Laranja"))` |
+| `sort()` | Ordena a lista em ordem crescente (alfabética ou numérica) | `frutas.sort()` |
+| `reverse()` | Inverte a ordem dos elementos da lista | `frutas.reverse()` |
+| `for (item in lista)` | Percorre todos os elementos da lista | `for (f in frutas) println(f)` |
+| `joinToString()` | Converte a lista em uma única string formatada | `println(frutas.joinToString(", "))` |
+
+---
 ## 📂 Lista de Atividades
 - [Lista 1 – Variáveis, Operadores Matemáticos e if/else](https://docs.google.com/document/d/1pfy5TH6OVX3XXufT9q3VN0aSqXCmTJGxGbD22tK6Ixw/edit?usp=sharing) (inicio 20/09| fim: 20/09) 
 - [Lista 2 – When, while e do while](https://docs.google.com/document/d/1X7piSX--u729lxASkoCxMtXNbnMEUwBYLeS39EWXcGU/edit?tab=t.0#heading=h.bmwx0c14zlpb) (inicio: 27/09 | fim: 04/10)
